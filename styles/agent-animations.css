@@ -1,0 +1,84 @@
+.animate-speak {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #00ff99;
+  border-radius: 50%;
+  animation: speakPulse 0.8s infinite alternate;
+  margin-left: 8px;
+}
+
+@keyframes speakPulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.5); opacity: 1; }
+}
+
+.ai-circle-animate {
+  pointer-events: none;
+  border: 4px solid #00ff99;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  animation: ai-pulse 1.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes ai-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInTranscript 0.5s ease-out;
+}
+
+@keyframes fadeInTranscript {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-glow-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(rgba(0,255,153,0.35), rgba(0,255,153,0.15), transparent 70%);
+  box-shadow: 0 0 32px 16px #00ff99, 0 0 64px 32px #00ff9944;
+  filter: blur(2px);
+  z-index: 0;
+  animation: ai-glow-pulse 1.6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes ai-glow-pulse {
+  0% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.09);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
