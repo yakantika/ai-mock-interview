@@ -36,7 +36,18 @@ A modern web application for practicing job interviews with an AI voice intervie
 ```bash
 git clone [https://github.com/yourusername/your-repo.git](https://github.com/yourusername/your-repo.git)
 cd your-repo
+```
 
 ### 2. Install dependencies
 ```bash
 npm install
+```
+### 3. Set up environment variables
+```bash
+cp .env.example .env.local
+```
+### 4. Run the development server
+```bash
+npm run dev
+```
+
